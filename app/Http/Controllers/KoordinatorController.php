@@ -17,7 +17,7 @@ class KoordinatorController extends Controller
     public function index(){
         $data['title'] = "Dashboard";
         $data['nama'] = Auth::user()->name;
-        $data['kegiatan'] = Kegiatan::where('koordinator_id',Auth::user()->id)->first();
+        $data['kegiatan'] = Kegiatan::where('koordinator_id',Auth::user()->id)->get();
         return view('Koordinator/index',$data);
     }
     public function profile()
