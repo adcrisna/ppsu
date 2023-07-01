@@ -19,6 +19,7 @@ class LurahController extends Controller
     public function index(){
         $data['title'] = "Dashboard";
         $data['nama'] = Auth::user()->name;
+        $data['kegiatan'] = Kegiatan::all();
         return view('Lurah/index',$data);
     }
     public function profile()

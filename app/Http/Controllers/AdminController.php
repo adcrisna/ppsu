@@ -19,6 +19,10 @@ class AdminController extends Controller
     public function index(){
         $data['title'] = "Dashboard";
         $data['nama'] = Auth::user()->name;
+        $data['koordinator'] = User::where('role',2)->get();
+        $data['tim'] = Tim::all();
+        $data['area'] = Area::all();
+        $data['kegiatan'] = Kegiatan::all();
         return view('Admin/index',$data);
     }
 
