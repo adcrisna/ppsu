@@ -93,6 +93,11 @@
                                             <a href="{{ route('admin.detail', $value->id) }}"
                                                 class="btn btn-xs btn-info"><i class="fa fa-eye">
                                                 </i> Detail</a>
+                                            <a href="{{ route('admin.deleteKegiatan', $value->id) }}"
+                                                class="btn btn-xs btn-danger"
+                                                onclick="return confirm('Apakah anda ingin menghapus data ini ?')"><i
+                                                    class="fa fa-trash">
+                                                </i> Hapus</a>
                                         </td>
                                     </tr>
                                 @endforeach

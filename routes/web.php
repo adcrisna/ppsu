@@ -56,6 +56,7 @@ Route::middleware(['auth'])->group(function () {
         Route::any('/kegiatan', [KegiatanController::class, 'index'])->name('admin.kegiatan');
         Route::any('/kegiatanUpdate', [KegiatanController::class, 'updateKegiatan'])->name('admin.updateKegiatan');
         Route::any('/kegiatanDetail/{id}', [KegiatanController::class, 'detail'])->name('admin.detail');
+        Route::any('/kegiatanDelete/{id}', [KegiatanController::class, 'deleteKegiatan'])->name('admin.deleteKegiatan');
     });
 });
 

@@ -43,4 +43,23 @@ class KegiatanController extends Controller
             return Redirect::route('admin.kegiatan');
         }
     }
+    public function deleteKegiatan($id)
+    {
+        DB::beginTransaction();
+        try {
+            $getKegiatan = Kegiatan::where('id',$id)->first();
+            \File::delete(public_path('foto/'.$getKegiatan->foto1));
+            \File::delete(public_path('foto/'.$getKegiatan->foto2));
+            \File::delete(public_path('foto/'.$getKegiatan->foto3));
+            $kegiatan = Kegiatan::where('id',$id)->delete();
+            DB::commit();
+            \Session::flash('msg_success','Data Kegiatan Berhasil Dihapus!');
+            return Redirect::route('admin.kegiatan');
+
+        } catch (Exception $e) {
+            DB::rollback();
+            \Session::flash('msg_error','Somethings Wrong!');
+            return Redirect::route('admin.kegiatan');
+        }
+    }
 }
