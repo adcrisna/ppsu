@@ -60,7 +60,7 @@
                             <thead>
                                 <tr>
 
-                                    <th>ID</th>
+                                    <th>No</th>
                                     <th>Hari</th>
                                     <th style="display: none">Tim ID</th>
                                     <th>Tim</th>

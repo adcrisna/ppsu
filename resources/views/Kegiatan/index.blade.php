@@ -58,7 +58,7 @@
                         <table class="table table-bordered table-striped" id="data-kegiatan">
                             <thead>
                                 <tr>
-                                    <th style="display: none">ID</th>
+                                    <th style="display: none">No</th>
                                     <th>Mulai</th>
                                     <th>Selesai</th>
                                     <th>TIM</th>
@@ -128,6 +128,10 @@
                                 <option value="Setujui">Setujui</option>
                                 <option value="Tolak">Tolak</option>
                             </select>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label>Catatan :</label>
+                            <textarea name="catatan" class="form-control" id="catatan" cols="5" rows="3" required></textarea>
                         </div>
                         <div class="row">
                             <div class="col-xs-4 col-xs-offset-8">

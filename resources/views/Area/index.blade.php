@@ -59,7 +59,7 @@
                             <thead>
                                 <tr>
 
-                                    <th>ID</th>
+                                    <th>No</th>
                                     <th>Nama</th>
                                     <th>RW</th>
                                     <th>Jumlah RT</th>

@@ -32,6 +32,7 @@ class KegiatanController extends Controller
         try {
                 $kegiatan = Kegiatan::find($request->id);
                 $kegiatan->status = $request->status;
+                $kegiatan->catatan = $request->catatan;
                 $kegiatan->save();
             DB::commit();
             \Session::flash('msg_success','Status Kegiatan Berhasil Diubah!');

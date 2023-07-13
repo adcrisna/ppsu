@@ -110,6 +110,7 @@ class KoordinatorController extends Controller
             $kegiatan->proses_pengerjaan = $request->prosesPengerjaan;
             $kegiatan->keterangan = $request->keterangan;
             $kegiatan->status = "Menunggu";
+            $kegiatan->catatan = null;
             $kegiatan->foto1 = $photo1;
             $kegiatan->foto2 = $photo2;
             $kegiatan->foto3 = $photo3;

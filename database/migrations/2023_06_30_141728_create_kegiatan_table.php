@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('proses_pengerjaan')->nullable();
             $table->text('keterangan')->nullable();
             $table->text('status')->nullable();
+            $table->text('catatan')->nullable();
             $table->string('foto1')->nullable();
             $table->string('foto2')->nullable();
             $table->string('foto3')->nullable();

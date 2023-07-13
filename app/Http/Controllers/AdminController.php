@@ -124,6 +124,11 @@ class AdminController extends Controller
     public function addKoordinator(Request $request) {
         DB::beginTransaction();
         try {
+            $cekData = User::where('username',$request->username)->first();
+            if (!empty($cekData)) {
+                \Session::flash('msg_error','Username Sudah Digunakan!');
+                return Redirect::route('admin.koordinator');
+            }
             $user = new User;
             $user->name = $request->name;
             $user->email = $request->email;

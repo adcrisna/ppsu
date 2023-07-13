@@ -95,6 +95,10 @@
                                     <td>{{ $detail->status }}</td>
                                 </tr>
                                 <tr>
+                                    <th style="width: 50%">Catatan</th>
+                                    <td>{{ $detail->catatan }}</td>
+                                </tr>
+                                <tr>
                                     <th style="width: 50%">Foto Sebelum Dikerjakan</th>
                                     <td><img class="zoom" src="{{ asset('foto/' . @$detail->foto1) }}"></td>
                                 </tr>

@@ -58,7 +58,7 @@
                         <table class="table table-bordered table-striped" id="data-kegiatan">
                             <thead>
                                 <tr>
-                                    <th style="display: none">ID</th>
+                                    <th style="display: none">No</th>
                                     <th>Mulai</th>
                                     <th>Selesai</th>
                                     <th>TIM</th>

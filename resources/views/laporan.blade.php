@@ -1,7 +1,7 @@
 <table>
     <thead>
         <tr>
-            <th>ID</th>&nbsp;
+            <th>No</th>&nbsp;
             <th>Mulai</th>
             <th>Selesai</th>
             <th>TIM</th>

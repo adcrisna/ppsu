@@ -58,7 +58,7 @@
                         <table class="table table-bordered table-striped" id="data-user">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>No</th>
                                     <th>Nama</th>
                                     <th>Email</th>
                                     <th>Username</th>
