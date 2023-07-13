@@ -59,7 +59,7 @@
                         <table class="table table-bordered table-striped" id="data-jadwal">
                             <thead>
                                 <tr>
-
+                                    <th style="display: none">ID</th>
                                     <th>No</th>
                                     <th>Hari</th>
                                     <th style="display: none">Tim ID</th>
@@ -73,7 +73,8 @@
                             <tbody>
                                 @foreach (@$jadwal as $key => $value)
                                     <tr>
-                                        <td>{{ @$value->id }}</td>
+                                        <td style="display: none">{{ @$value->id }}</td>
+                                        <td>{{ @$key + 1 }}</td>
                                         <td>
                                             @foreach ($value->hari as $item)
                                                 {{ $item }}
@@ -210,8 +211,8 @@
             row = table.row($(this).closest('tr')).data();
             console.log(row);
             $('input[name=id]').val(row[0]);
-            $('select[name=hari]').val(row[1]);
-            $('select[name=tim]').val(row[2]);
+            $('select[name=hari]').val(row[2]);
+            $('select[name=tim]').val(row[3]);
             $('#modal-form-edit-jadwal').modal('show');
         });
         $('#modal-form-tambah-jadwal').on('show.bs.modal', function() {

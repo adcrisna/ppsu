@@ -58,7 +58,7 @@
                         <table class="table table-bordered table-striped" id="data-area">
                             <thead>
                                 <tr>
-
+                                    <th style="display: none">ID</th>
                                     <th>No</th>
                                     <th>Nama</th>
                                     <th>RW</th>
@@ -72,7 +72,8 @@
                             <tbody>
                                 @foreach (@$area as $key => $value)
                                     <tr>
-                                        <td>{{ @$value->id }}</td>
+                                        <td style="display: none">{{ @$value->id }}</td>
+                                        <td>{{ @$key + 1 }}</td>
                                         <td>{{ @$value->name }}</td>
                                         <td>{{ @$value->rw }}</td>
                                         <td>{{ @$value->jumlah_rt }}</td>
@@ -199,11 +200,11 @@
             row = table.row($(this).closest('tr')).data();
             console.log(row);
             $('input[name=id]').val(row[0]);
-            $('input[name=name]').val(row[1]);
-            $('input[name=rw]').val(row[2]);
-            $('input[name=jumlah_rt]').val(row[3]);
-            $('textarea[name=alamat]').val(row[4]);
-            $('input[name=phone]').val(row[5])
+            $('input[name=name]').val(row[2]);
+            $('input[name=rw]').val(row[3]);
+            $('input[name=jumlah_rt]').val(row[4]);
+            $('textarea[name=alamat]').val(row[5]);
+            $('input[name=phone]').val(row[6])
             $('#modal-form-edit-area').modal('show');
         });
         $('#modal-form-tambah-area').on('show.bs.modal', function() {

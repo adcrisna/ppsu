@@ -58,7 +58,7 @@
                         <table class="table table-bordered table-striped" id="data-tim">
                             <thead>
                                 <tr>
-
+                                    <th style="display: none">ID</th>
                                     <th>No</th>
                                     <th>Nama</th>
                                     <th>Jumlah Personel</th>
@@ -73,6 +73,7 @@
                                 @foreach (@$tim as $key => $value)
                                     <tr>
                                         <td>{{ @$value->id }}</td>
+                                        <td>{{ @$key + 1 }}</td>
                                         <td>{{ @$value->name }}</td>
                                         <td>{{ @$value->jumlah_personel }}</td>
                                         <td style="display: none">{{ @$value->koordinator_id }}</td>
@@ -209,10 +210,10 @@
             row = table.row($(this).closest('tr')).data();
             console.log(row);
             $('input[name=id]').val(row[0]);
-            $('input[name=name]').val(row[1]);
-            $('input[name=jumlahPersonel]').val(row[2]);
-            $('select[name=koordinator]').val(row[3]);
-            $('select[name=area]').val(row[4]);
+            $('input[name=name]').val(row[2]);
+            $('input[name=jumlahPersonel]').val(row[3]);
+            $('select[name=koordinator]').val(row[4]);
+            $('select[name=area]').val(row[5]);
             $('#modal-form-edit-tim').modal('show');
         });
         $('#modal-form-tambah-tim').on('show.bs.modal', function() {

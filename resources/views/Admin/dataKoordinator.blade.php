@@ -58,6 +58,7 @@
                         <table class="table table-bordered table-striped" id="data-user">
                             <thead>
                                 <tr>
+                                    <th style="display: none">ID</th>
                                     <th>No</th>
                                     <th>Nama</th>
                                     <th>Email</th>
@@ -72,7 +73,8 @@
                             <tbody>
                                 @foreach (@$koordinator as $key => $value)
                                     <tr>
-                                        <td>{{ @$value->id }}</td>
+                                        <td style="display: none">{{ @$value->id }}</td>
+                                        <td>{{ @$key + 1 }}</td>
                                         <td>{{ @$value->name }}</td>
                                         <td>{{ @$value->email }}</td>
                                         <td>{{ @$value->username }}</td>
@@ -226,13 +228,13 @@
             row = table.row($(this).closest('tr')).data();
             console.log(row);
             $('input[name=id]').val(row[0]);
-            $('input[name=name]').val(row[1]);
-            $('input[name=email]').val(row[2]);
-            $('input[name=username]').val(row[3]);
-            $('input[name=phone]').val(row[4]);
-            $('textarea[name=alamat]').val(row[5]);
-            $('input[name=nip]').val(row[6]);
-            $('input[name=nik]').val(row[7]);
+            $('input[name=name]').val(row[2]);
+            $('input[name=email]').val(row[3]);
+            $('input[name=username]').val(row[4]);
+            $('input[name=phone]').val(row[5]);
+            $('textarea[name=alamat]').val(row[6]);
+            $('input[name=nip]').val(row[7]);
+            $('input[name=nik]').val(row[8]);
             $('#modal-form-edit-user').modal('show');
         });
         $('#modal-form-tambah-user').on('show.bs.modal', function() {
